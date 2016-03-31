@@ -30,8 +30,8 @@ setup(
     license='MIT',
     author='viatoriche',
     author_email='maxim@via-net.org',
-    description='Downloader for web based on mechanize',
-    url='https://github.com/viatoriche/mechloader',
-    download_url='https://github.com/viatoriche/mechloader/tarball/{}'.format(version),
+    description='Small utilities',
+    url='https://github.com/viatoriche/vtr_utils',
+    download_url='https://github.com/viatoriche/vtr_utils/tarball/{}'.format(version),
     install_requires=['addict', 'pytz', 'six', 'pyunpack', 'patool'],
 )
