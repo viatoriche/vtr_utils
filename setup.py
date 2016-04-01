@@ -1,10 +1,11 @@
 import os
 from distutils.core import setup
+
 from setuptools import find_packages
 
 package = 'vtr_utils'
 
-version = "0.0.2"
+version = "0.1.0"
 packages = find_packages()
 
 def get_package_data(package):
