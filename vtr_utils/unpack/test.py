@@ -12,7 +12,7 @@ class TestUnpack(unittest.TestCase):
         from vtr_utils.unpack import Unpack
         import os
 
-        unp = Unpack(os.path.join(os.path.dirname(__file__), 'testfile.txt.ARJ'))
+        unp = Unpack(os.path.join(os.path.dirname(__file__), 'testfile.txt.ARJ'), timeout=10)
         result = unp.get_file('testfile.txt')
         self.assertEqual('OK', result)
 
@@ -33,3 +33,5 @@ class TestUnpack(unittest.TestCase):
         self.assertEqual(modify_datetime.second, 31)
         self.assertEqual(modify_datetime.tzinfo, pytz.utc)
 
+        pathes = [os.path.basename(f) for f in unp.get_pathes()]
+        self.assertEqual(pathes, ['folder', 'testfile.txt', 'anotherfile.txt'])
